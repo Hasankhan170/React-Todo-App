@@ -1,6 +1,11 @@
 const App = ()=>{
   return (
-    <h1>hello react</h1>
+    <div>
+      <h1>React Todo App</h1>
+      <form>
+        <input type="text" placeholder="Enter Todo" />
+      </form>
+    </div>
   )
 }
 
