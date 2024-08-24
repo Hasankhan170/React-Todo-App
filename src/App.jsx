@@ -13,19 +13,21 @@ function App(){
     }
 
     arr.push(inputValue.current.value)
-    console.log(arr);
     setArr([...arr])
 
 
     inputValue.current.value = ""
-    
   }
 
   const deleteTodo = (index)=>{
     arr.splice(index ,1)
     setArr([...arr])
-    console.log(arr);
-    
+  }
+
+  const editTodo =(index)=>{
+    const newValue = prompt('Enter New Value')
+    arr.splice(index,1,newValue)
+    setArr([...arr])
   }
 
   return (
@@ -41,6 +43,7 @@ function App(){
             return <div key={index}>
               <li>{item}</li>
               <button onClick={ ()=> deleteTodo(index)}>Delete Todo</button>
+              <button onClick={ ()=> editTodo(index)}>Edit Todo</button>
             </div>
           })
 
