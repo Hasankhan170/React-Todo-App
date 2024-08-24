@@ -27,6 +27,18 @@ function App(){
         <input type="text" placeholder="Enter Todo" ref={inputValue} />
         <button type="submit" className="">Click</button>
       </form>
+      <ul>
+        {
+          arr.map((item,index)=>{
+            return <div key={index}>
+              <li>{item}</li>
+              <button>Delete Todo</button>
+              <button>Edit Todo</button>
+            </div>
+          })
+
+        }
+        </ul>
     </div>
   )
 }
