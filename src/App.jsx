@@ -31,7 +31,7 @@ function App(){
   }
 
   return (
-    <div>
+    <div className="text-center">
       <h1>Todo App</h1>
       <form onSubmit={formValue}>
         <input type="text" placeholder="Enter Todo" ref={inputValue} />
@@ -46,7 +46,6 @@ function App(){
               <button onClick={ ()=> editTodo(index)}>Edit Todo</button>
             </div>
           })
-
         }
         </ul>
     </div>
