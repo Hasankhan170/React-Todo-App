@@ -6,8 +6,9 @@ function App(){
   const inputValue = useRef()
   const formValue = (e)=>{
     e.preventDefault()
-    if(inputValue.value === null || ""){
-      alert("Please Enter Something!")
+    
+    if(inputValue.current.value.trim() === ''){
+      alert('please enter somthing')
       return;
     }
 
