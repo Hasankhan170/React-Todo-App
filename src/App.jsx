@@ -6,6 +6,10 @@ function App(){
   const inputValue = useRef()
   const formValue = (e)=>{
     e.preventDefault()
+    if(inputValue.value === null || ""){
+      alert("Please Enter Something!")
+      return;
+    }
 
     arr.push(inputValue.current.value)
     console.log(arr);
@@ -14,7 +18,7 @@ function App(){
     inputValue.current.value = ""
     
   }
-  
+
   return (
     <div>
       <h1>Todo App</h1>
