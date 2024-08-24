@@ -16,7 +16,15 @@ function App(){
     console.log(arr);
     setArr([...arr])
 
+
     inputValue.current.value = ""
+    
+  }
+
+  const deleteTodo = (index)=>{
+    arr.splice(index ,1)
+    setArr([...arr])
+    console.log(arr);
     
   }
 
@@ -32,8 +40,7 @@ function App(){
           arr.map((item,index)=>{
             return <div key={index}>
               <li>{item}</li>
-              <button>Delete Todo</button>
-              <button>Edit Todo</button>
+              <button onClick={ ()=> deleteTodo(index)}>Delete Todo</button>
             </div>
           })
 
