@@ -43,6 +43,7 @@ function App(){
       </form>
       <div>
         {
+          arr.length > 0 ?
           arr.map((item,index)=>{
             return <div className="m-2 p-2 bg-light flex-wrap d-flex justify-content-around align-items-center" key={index}>
               <h4 className="px-2">{item}</h4>
@@ -51,7 +52,7 @@ function App(){
               <button className="btn btn-success form-control px-3 border " onClick={()=> editTodo(index)}><i className="fa-regular fa-pen-to-square"></i></button>
           </div>
         </div>
-          })
+          }) : <h4>No Items Founds</h4>
         }
       </div>
     </div>
